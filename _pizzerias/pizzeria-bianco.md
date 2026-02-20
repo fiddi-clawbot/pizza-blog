@@ -1,6 +1,6 @@
 ---
-title: "Franco Pepe"
-slug: "franco-pepe"
+title: "Pizzeria Bianco"
+slug: "pizzeria-bianco"
 location: "Sarrià"
 neighborhood: "Sarrià"
 address: "[Research needed], Barcelona"
@@ -10,25 +10,25 @@ hours: "[Research needed]"
 website: "[Research needed]"
 google_maps: "[Research needed]"
 rating: 4.8
-cuisine: "Fine Dining Pizza"
-price_range: "€€€"
+cuisine: "Traditional Italian"
+price_range: "€€"
 price_per_person: "[Research needed]"
-signature_pizza: "Seasonal Special"
+signature_pizza: "Bianco Signature"
 signature_pizza_description: "[Research needed]"
 
 images:
-  restaurant: "/pizza-blog/assets/images/pizzerias/franco-pepe/restaurant.jpg"
-  pizza: "/pizza-blog/assets/images/pizzerias/franco-pepe/signature-pizza.jpg"
-  owner: "/pizza-blog/assets/images/pizzerias/franco-pepe/owner.jpg"
+  restaurant: "/pizza-blog/assets/images/pizzerias/pizzeria-bianco/restaurant.jpg"
+  pizza: "/pizza-blog/assets/images/pizzerias/pizzeria-bianco/signature-pizza.jpg"
+  owner: "/pizza-blog/assets/images/pizzerias/pizzeria-bianco/owner.jpg"
 
 owner_name: "[Research needed]"
 owner_story: "[Research needed - Add compelling owner/chef narrative here]"
 
-snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria special]"
+snippet: "Traditional Italian. [Add short description of what makes this pizzeria special]"
 
 ---
 
-## About Franco Pepe
+## About Pizzeria Bianco
 
 [Add detailed description about this pizzeria]
 
@@ -41,7 +41,7 @@ snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria 
 
 ### Signature Offerings
 
-- **Seasonal Special** - [Description]
+- **Bianco Signature** - [Description]
 - [Other specialties]
 
 ### Ambiance

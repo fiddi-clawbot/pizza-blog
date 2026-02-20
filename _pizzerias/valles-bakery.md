@@ -1,8 +1,8 @@
 ---
-title: "Franco Pepe"
-slug: "franco-pepe"
-location: "Sarrià"
-neighborhood: "Sarrià"
+title: "Vallès Bakery & Pizzeria"
+slug: "valles-bakery"
+location: "Gràcia"
+neighborhood: "Gràcia"
 address: "[Research needed], Barcelona"
 phone: "[Research needed]"
 email: "[Research needed]"
@@ -10,25 +10,25 @@ hours: "[Research needed]"
 website: "[Research needed]"
 google_maps: "[Research needed]"
 rating: 4.8
-cuisine: "Fine Dining Pizza"
-price_range: "€€€"
+cuisine: "Artisanal Bakery"
+price_range: "€"
 price_per_person: "[Research needed]"
-signature_pizza: "Seasonal Special"
+signature_pizza: "Morning Fresh"
 signature_pizza_description: "[Research needed]"
 
 images:
-  restaurant: "/pizza-blog/assets/images/pizzerias/franco-pepe/restaurant.jpg"
-  pizza: "/pizza-blog/assets/images/pizzerias/franco-pepe/signature-pizza.jpg"
-  owner: "/pizza-blog/assets/images/pizzerias/franco-pepe/owner.jpg"
+  restaurant: "/pizza-blog/assets/images/pizzerias/valles-bakery/restaurant.jpg"
+  pizza: "/pizza-blog/assets/images/pizzerias/valles-bakery/signature-pizza.jpg"
+  owner: "/pizza-blog/assets/images/pizzerias/valles-bakery/owner.jpg"
 
 owner_name: "[Research needed]"
 owner_story: "[Research needed - Add compelling owner/chef narrative here]"
 
-snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria special]"
+snippet: "Artisanal Bakery. [Add short description of what makes this pizzeria special]"
 
 ---
 
-## About Franco Pepe
+## About Vallès Bakery & Pizzeria
 
 [Add detailed description about this pizzeria]
 
@@ -41,7 +41,7 @@ snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria 
 
 ### Signature Offerings
 
-- **Seasonal Special** - [Description]
+- **Morning Fresh** - [Description]
 - [Other specialties]
 
 ### Ambiance

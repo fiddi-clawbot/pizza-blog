@@ -3,41 +3,102 @@ layout: default
 ---
 
 <article>
-    <header style="margin-bottom: var(--space-16);">
-        <h1>{{ page.title }}</h1>
-        <div class="card-meta" style="margin-bottom: var(--space-12);">
+    <!-- Hero Image -->
+    {% if page.images.restaurant %}
+    <div style="margin-bottom: var(--space-20); border-radius: var(--radius-xl); overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <img src="{{ page.images.restaurant }}" alt="{{ page.title }}" style="width: 100%; height: 400px; object-fit: cover; display: block;">
+    </div>
+    {% endif %}
+
+    <!-- Header -->
+    <header style="margin-bottom: var(--space-20);">
+        <h1 style="margin-bottom: var(--space-8);">{{ page.title }}</h1>
+        
+        <div class="card-meta" style="margin-bottom: var(--space-16);">
             <span>📍 {{ page.location }}</span>
             <span>⭐ {{ page.rating }}/5</span>
             <span>{{ page.cuisine }}</span>
             <span>{{ page.price_range }}</span>
         </div>
         
-        <div class="featured">
-            <div class="grid grid-cols-2" style="gap: var(--space-8);">
-                <div>
-                    <p style="font-size: var(--text-sm); color: var(--color-text-lighter); margin-bottom: var(--space-2);">Address</p>
-                    <p style="margin: 0; color: var(--color-text);">{{ page.address }}</p>
-                </div>
-                <div>
-                    <p style="font-size: var(--text-sm); color: var(--color-text-lighter); margin-bottom: var(--space-2);">Contact</p>
-                    <p style="margin: 0; color: var(--color-text);">{{ page.phone }}</p>
-                </div>
+        <!-- Info Grid -->
+        <div class="featured" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); margin-bottom: var(--space-16);">
+            <div>
+                <p style="font-size: var(--text-xs); color: var(--color-text-lighter); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: var(--space-4);">Address</p>
+                <p style="margin: 0; color: var(--color-text); line-height: 1.6;">{{ page.address }}</p>
             </div>
+            <div>
+                <p style="font-size: var(--text-xs); color: var(--color-text-lighter); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: var(--space-4);">Contact</p>
+                <p style="margin: 0;">
+                    {% if page.phone %}<a href="tel:{{ page.phone }}" style="color: var(--color-accent);">{{ page.phone }}</a>{% endif %}
+                    {% if page.email %}<br><a href="mailto:{{ page.email }}" style="color: var(--color-accent);">{{ page.email }}</a>{% endif %}
+                </p>
+            </div>
+            <div>
+                <p style="font-size: var(--text-xs); color: var(--color-text-lighter); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: var(--space-4);">Hours</p>
+                <p style="margin: 0; color: var(--color-text);">{{ page.hours }}</p>
+            </div>
+            <div>
+                <p style="font-size: var(--text-xs); color: var(--color-text-lighter); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: var(--space-4);">Price Range</p>
+                <p style="margin: 0; color: var(--color-text);">{{ page.price_per_person }}</p>
+            </div>
+        </div>
+
+        <!-- CTAs -->
+        <div style="display: flex; gap: var(--space-8); flex-wrap: wrap;">
             {% if page.website %}
-            <div style="margin-top: var(--space-8);">
-                <a href="{{ page.website }}" target="_blank" class="btn btn-sm">Visit Website</a>
-            </div>
+            <a href="{{ page.website }}" target="_blank" class="btn btn-sm">Visit Website</a>
+            {% endif %}
+            {% if page.google_maps %}
+            <a href="{{ page.google_maps }}" target="_blank" class="btn btn-sm btn-ghost">View Map</a>
             {% endif %}
         </div>
     </header>
 
-    <div class="card" style="margin-bottom: var(--space-16);">
+    <!-- Content -->
+    <div class="card" style="margin-bottom: var(--space-20);">
         <div class="card-body">
             {{ content }}
         </div>
     </div>
 
-    <div style="text-align: center; padding: var(--space-12); background: var(--color-gray-50); border-radius: var(--radius-xl);">
-        <a href="/pizzerias.html" class="btn btn-ghost">← Back to Directory</a>
+    <!-- Signature Pizza Section -->
+    {% if page.signature_pizza %}
+    <section style="margin-bottom: var(--space-20);">
+        <h2 style="margin-bottom: var(--space-12);">Signature Pizza</h2>
+        <p style="font-size: var(--text-lg); color: var(--color-accent); margin-bottom: var(--space-8); font-weight: 600;">{{ page.signature_pizza }}</p>
+        {% if page.signature_pizza_description %}
+        <p style="color: var(--color-text-lighter); line-height: 1.8; margin-bottom: var(--space-12);">{{ page.signature_pizza_description }}</p>
+        {% endif %}
+        
+        {% if page.images.pizza %}
+        <img src="{{ page.images.pizza }}" alt="{{ page.signature_pizza }}" style="width: 100%; max-width: 500px; border-radius: var(--radius-xl); object-fit: cover; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        {% endif %}
+    </section>
+    {% endif %}
+
+    <!-- Owner / Pizzaiolo Section -->
+    {% if page.owner_name or page.images.owner %}
+    <section style="margin-bottom: var(--space-20);">
+        <h2 style="margin-bottom: var(--space-12);">Behind the Counter</h2>
+        <div style="display: grid; grid-template-columns: 200px 1fr; gap: var(--space-16); align-items: start;">
+            {% if page.images.owner %}
+            <img src="{{ page.images.owner }}" alt="{{ page.owner_name }}" style="width: 200px; height: 200px; border-radius: var(--radius-lg); object-fit: cover; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            {% endif %}
+            <div>
+                {% if page.owner_name %}
+                <p style="font-weight: 600; color: var(--color-accent); margin-bottom: var(--space-4);">{{ page.owner_name }}</p>
+                {% endif %}
+                {% if page.owner_story %}
+                <p style="color: var(--color-text-lighter); line-height: 1.8; margin: 0;">{{ page.owner_story }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Back Button -->
+    <div style="text-align: center; padding: var(--space-16); background: var(--color-gray-50); border-radius: var(--radius-xl);">
+        <a href="{{ site.baseurl }}/pizzerias.html" class="btn btn-ghost">← Back to Directory</a>
     </div>
 </article>

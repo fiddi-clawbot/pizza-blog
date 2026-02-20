@@ -1,6 +1,6 @@
 ---
-title: "Franco Pepe"
-slug: "franco-pepe"
+title: "Pane e Vino"
+slug: "pane-e-vino"
 location: "Sarrià"
 neighborhood: "Sarrià"
 address: "[Research needed], Barcelona"
@@ -10,25 +10,25 @@ hours: "[Research needed]"
 website: "[Research needed]"
 google_maps: "[Research needed]"
 rating: 4.8
-cuisine: "Fine Dining Pizza"
-price_range: "€€€"
+cuisine: "Family Traditional"
+price_range: "€"
 price_per_person: "[Research needed]"
-signature_pizza: "Seasonal Special"
+signature_pizza: "Family Recipe"
 signature_pizza_description: "[Research needed]"
 
 images:
-  restaurant: "/pizza-blog/assets/images/pizzerias/franco-pepe/restaurant.jpg"
-  pizza: "/pizza-blog/assets/images/pizzerias/franco-pepe/signature-pizza.jpg"
-  owner: "/pizza-blog/assets/images/pizzerias/franco-pepe/owner.jpg"
+  restaurant: "/pizza-blog/assets/images/pizzerias/pane-e-vino/restaurant.jpg"
+  pizza: "/pizza-blog/assets/images/pizzerias/pane-e-vino/signature-pizza.jpg"
+  owner: "/pizza-blog/assets/images/pizzerias/pane-e-vino/owner.jpg"
 
 owner_name: "[Research needed]"
 owner_story: "[Research needed - Add compelling owner/chef narrative here]"
 
-snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria special]"
+snippet: "Family Traditional. [Add short description of what makes this pizzeria special]"
 
 ---
 
-## About Franco Pepe
+## About Pane e Vino
 
 [Add detailed description about this pizzeria]
 
@@ -41,7 +41,7 @@ snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria 
 
 ### Signature Offerings
 
-- **Seasonal Special** - [Description]
+- **Family Recipe** - [Description]
 - [Other specialties]
 
 ### Ambiance

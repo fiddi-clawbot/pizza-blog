@@ -5,9 +5,10 @@ title: Pizzeria Directory
 
 <header style="margin-bottom: var(--space-20); text-align: center;">
     <h1>Pizzeria Directory</h1>
-    <p>{{ site.pizzerias | size }} pizzerias across Barcelona</p>
+    <p style="font-size: var(--text-lg); color: var(--color-text-lighter); margin: 0;">{{ site.pizzerias | size }} pizzerias across Barcelona • Curated for quality & lifestyle</p>
 </header>
 
+<!-- Stats -->
 <div style="margin-bottom: var(--space-20);">
     <div class="stats-grid">
         <div class="stat-box">
@@ -25,29 +26,53 @@ title: Pizzeria Directory
     </div>
 </div>
 
-<div class="grid grid-cols-auto">
+<!-- Pizzeria Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-16); margin-bottom: var(--space-20);">
     {% assign sorted_pizzerias = site.pizzerias | sort: 'rating' | reverse %}
     {% for pizzeria in sorted_pizzerias %}
-    <div class="card fade-in">
-        <div class="card-header">
-            <h3 class="card-title">{{ pizzeria.title }}</h3>
-            <div class="card-meta">
-                <span>{{ pizzeria.location }}</span>
-                <span>⭐ {{ pizzeria.rating }}/5</span>
+    <a href="{{ pizzeria.url }}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+        <div class="card fade-in" style="overflow: hidden; display: flex; flex-direction: column; height: 100%; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+            
+            <!-- Image -->
+            {% if pizzeria.images.restaurant %}
+            <div style="width: 100%; height: 200px; overflow: hidden; background: var(--color-gray-100);">
+                <img src="{{ pizzeria.images.restaurant }}" alt="{{ pizzeria.title }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
-        </div>
-        <div class="card-body">
-            <p>{{ pizzeria.verdict }}</p>
-            {% if pizzeria.phone %}
-            <p style="font-size: var(--text-sm); color: var(--color-text-lighter); margin: var(--space-4) 0 0 0;">{{ pizzeria.phone }}</p>
+            {% else %}
+            <div style="width: 100%; height: 200px; background: linear-gradient(135deg, var(--color-accent) 0%, #ff6b6b 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: var(--text-lg);">
+                🍕
+            </div>
             {% endif %}
+            
+            <!-- Content -->
+            <div class="card-body" style="flex: 1; display: flex; flex-direction: column;">
+                <h3 class="card-title" style="margin-bottom: var(--space-4);">{{ pizzeria.title }}</h3>
+                
+                <div class="card-meta" style="margin-bottom: var(--space-8); font-size: var(--text-sm);">
+                    <span>📍 {{ pizzeria.location }}</span>
+                    <span>⭐ {{ pizzeria.rating }}/5</span>
+                </div>
+                
+                {% if pizzeria.signature_pizza %}
+                <p style="font-size: var(--text-sm); color: var(--color-accent); margin-bottom: var(--space-8); font-weight: 500;">Signature: <strong>{{ pizzeria.signature_pizza }}</strong></p>
+                {% endif %}
+                
+                {% if pizzeria.snippet %}
+                <p style="flex: 1; color: var(--color-text-lighter); font-size: var(--text-sm); line-height: 1.6; margin-bottom: var(--space-8);">{{ pizzeria.snippet }}</p>
+                {% endif %}
+            </div>
+            
+            <!-- Footer -->
+            <div class="card-footer" style="border-top: 1px solid var(--color-border); padding-top: var(--space-8);">
+                <div style="display: flex; gap: var(--space-8); flex-wrap: wrap;">
+                    <span class="badge badge-red">{{ pizzeria.price_range }}</span>
+                    <span class="badge">{{ pizzeria.cuisine }}</span>
+                </div>
+                <span style="margin-left: auto; color: var(--color-accent); font-weight: 500;">View →</span>
+            </div>
+            
         </div>
-        <div class="card-footer">
-            <span class="badge badge-red">{{ pizzeria.price_range }}</span>
-            <span class="badge">{{ pizzeria.cuisine }}</span>
-            <a href="{{ pizzeria.url }}" style="margin-left: auto;">View →</a>
-        </div>
-    </div>
+    </a>
     {% endfor %}
 </div>
 
@@ -58,6 +83,7 @@ title: Pizzeria Directory
 </div>
 {% endif %}
 
+<!-- Back Button -->
 <div style="text-align: center; padding: var(--space-12); margin-top: var(--space-20);">
-    <a href="/" class="btn btn-ghost">← Back Home</a>
+    <a href="{{ site.baseurl }}/" class="btn btn-ghost">← Back Home</a>
 </div>

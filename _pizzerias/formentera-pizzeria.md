@@ -1,8 +1,8 @@
 ---
-title: "Franco Pepe"
-slug: "franco-pepe"
-location: "Sarrià"
-neighborhood: "Sarrià"
+title: "Formentera Pizzería"
+slug: "formentera-pizzeria"
+location: "Gràcia"
+neighborhood: "Gràcia"
 address: "[Research needed], Barcelona"
 phone: "[Research needed]"
 email: "[Research needed]"
@@ -10,25 +10,25 @@ hours: "[Research needed]"
 website: "[Research needed]"
 google_maps: "[Research needed]"
 rating: 4.8
-cuisine: "Fine Dining Pizza"
-price_range: "€€€"
+cuisine: "Casual Beachside"
+price_range: "€"
 price_per_person: "[Research needed]"
-signature_pizza: "Seasonal Special"
+signature_pizza: "Formentera Classic"
 signature_pizza_description: "[Research needed]"
 
 images:
-  restaurant: "/pizza-blog/assets/images/pizzerias/franco-pepe/restaurant.jpg"
-  pizza: "/pizza-blog/assets/images/pizzerias/franco-pepe/signature-pizza.jpg"
-  owner: "/pizza-blog/assets/images/pizzerias/franco-pepe/owner.jpg"
+  restaurant: "/pizza-blog/assets/images/pizzerias/formentera-pizzeria/restaurant.jpg"
+  pizza: "/pizza-blog/assets/images/pizzerias/formentera-pizzeria/signature-pizza.jpg"
+  owner: "/pizza-blog/assets/images/pizzerias/formentera-pizzeria/owner.jpg"
 
 owner_name: "[Research needed]"
 owner_story: "[Research needed - Add compelling owner/chef narrative here]"
 
-snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria special]"
+snippet: "Casual Beachside. [Add short description of what makes this pizzeria special]"
 
 ---
 
-## About Franco Pepe
+## About Formentera Pizzería
 
 [Add detailed description about this pizzeria]
 
@@ -41,7 +41,7 @@ snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria 
 
 ### Signature Offerings
 
-- **Seasonal Special** - [Description]
+- **Formentera Classic** - [Description]
 - [Other specialties]
 
 ### Ambiance

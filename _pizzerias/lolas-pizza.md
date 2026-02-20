@@ -1,8 +1,8 @@
 ---
-title: "Franco Pepe"
-slug: "franco-pepe"
-location: "Sarrià"
-neighborhood: "Sarrià"
+title: "Lola's Pizza"
+slug: "lolas-pizza"
+location: "Eixample"
+neighborhood: "Eixample"
 address: "[Research needed], Barcelona"
 phone: "[Research needed]"
 email: "[Research needed]"
@@ -10,25 +10,25 @@ hours: "[Research needed]"
 website: "[Research needed]"
 google_maps: "[Research needed]"
 rating: 4.8
-cuisine: "Fine Dining Pizza"
-price_range: "€€€"
+cuisine: "American-Italian"
+price_range: "€"
 price_per_person: "[Research needed]"
-signature_pizza: "Seasonal Special"
+signature_pizza: "Lola's Favorite"
 signature_pizza_description: "[Research needed]"
 
 images:
-  restaurant: "/pizza-blog/assets/images/pizzerias/franco-pepe/restaurant.jpg"
-  pizza: "/pizza-blog/assets/images/pizzerias/franco-pepe/signature-pizza.jpg"
-  owner: "/pizza-blog/assets/images/pizzerias/franco-pepe/owner.jpg"
+  restaurant: "/pizza-blog/assets/images/pizzerias/lolas-pizza/restaurant.jpg"
+  pizza: "/pizza-blog/assets/images/pizzerias/lolas-pizza/signature-pizza.jpg"
+  owner: "/pizza-blog/assets/images/pizzerias/lolas-pizza/owner.jpg"
 
 owner_name: "[Research needed]"
 owner_story: "[Research needed - Add compelling owner/chef narrative here]"
 
-snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria special]"
+snippet: "American-Italian. [Add short description of what makes this pizzeria special]"
 
 ---
 
-## About Franco Pepe
+## About Lola's Pizza
 
 [Add detailed description about this pizzeria]
 
@@ -41,7 +41,7 @@ snippet: "Fine Dining Pizza. [Add short description of what makes this pizzeria 
 
 ### Signature Offerings
 
-- **Seasonal Special** - [Description]
+- **Lola's Favorite** - [Description]
 - [Other specialties]
 
 ### Ambiance
