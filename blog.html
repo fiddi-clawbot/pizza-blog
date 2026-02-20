@@ -1,0 +1,72 @@
+---
+layout: default
+title: Blog - Pizza Stories & Guides
+---
+
+<section class="hero" style="background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);">
+    <div class="container">
+        <h1 style="color: white;">Pizza Stories & Guides</h1>
+        <p>Explore the history, culture, and art of pizza</p>
+    </div>
+</section>
+
+<div class="container" style="max-width: 900px; padding: 3rem 0;">
+    <div class="content-section">
+        {% for post in site.posts %}
+        <article style="background: white; padding: 2rem; margin-bottom: 2rem; border-radius: 12px; border-left: 4px solid #FF5722; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.15); transform: translateY(-2px);'" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1); transform: translateY(0);'">
+            <header style="margin-bottom: 1rem;">
+                <h2 style="margin: 0 0 0.5rem 0; border: none;">
+                    <a href="{{ post.url }}" style="color: #FF5722; text-decoration: none;">{{ post.title }}</a>
+                </h2>
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; color: #7F8C8D; font-size: 0.9rem;">
+                    <span>📅 {{ post.date | date: "%b %d, %Y" }}</span>
+                    {% if post.author %}
+                    <span>✍️ {{ post.author }}</span>
+                    {% endif %}
+                    {% if post.categories %}
+                    <span>
+                        📂 {% for category in post.categories %}
+                        {{ category }}{% unless forloop.last %}, {% endunless %}
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </div>
+            </header>
+            
+            <p style="color: #2C3E50; line-height: 1.8; margin: 1rem 0;">
+                {{ post.excerpt | strip_html | truncatewords: 50 }}
+            </p>
+            
+            <a href="{{ post.url }}" class="btn" style="display: inline-block;">Read Full Article →</a>
+        </article>
+        {% endfor %}
+    </div>
+
+    {% if site.posts.size == 0 %}
+    <div style="text-align: center; padding: 3rem; color: #7F8C8D;">
+        <h3>No posts yet...</h3>
+        <p>Check back soon for pizza stories and guides!</p>
+    </div>
+    {% endif %}
+
+    <div style="text-align: center; padding: 2rem; margin-top: 2rem; background: #ECF0F1; border-radius: 12px;">
+        <a href="/pizza-blog/" class="btn">← Back to Home</a>
+    </div>
+</div>
+
+<style>
+    article {
+        animation: slideInLeft 0.6s ease-out;
+    }
+    
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>

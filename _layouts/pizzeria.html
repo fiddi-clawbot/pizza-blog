@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<div class="content-section">
+    <div class="container" style="max-width: 800px;">
+        <div class="featured" style="border-top: 4px solid #FF5722;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1.5rem;">
+                <div>
+                    <h1 style="margin: 0; font-size: 2.5rem;">{{ page.title }}</h1>
+                    <p style="font-size: 1.2rem; color: #7F8C8D; margin: 0.5rem 0 0 0;">📍 {{ page.location }}</p>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #FF5722;">⭐ {{ page.rating }}</div>
+                    <p style="font-size: 0.9rem; color: #7F8C8D; margin: 0;">out of 5</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; padding: 1rem; background: #ECF0F1; border-radius: 8px;">
+                <div>
+                    <p style="font-size: 0.9rem; color: #7F8C8D; margin: 0;">Cuisine Style</p>
+                    <p style="font-size: 1.3rem; font-weight: 600; margin: 0; color: #FF5722;">{{ page.cuisine }}</p>
+                </div>
+                <div>
+                    <p style="font-size: 0.9rem; color: #7F8C8D; margin: 0;">Price Range</p>
+                    <p style="font-size: 1.3rem; font-weight: 600; margin: 0; color: #FF5722;">{{ page.price_range }}</p>
+                </div>
+                <div>
+                    <p style="font-size: 0.9rem; color: #7F8C8D; margin: 0;">Contact</p>
+                    <p style="font-size: 1.1rem; font-weight: 600; margin: 0; color: #2C3E50;">{{ page.phone }}</p>
+                </div>
+            </div>
+
+            {% if page.address %}
+            <div style="margin: 1.5rem 0; padding: 1rem; background: white; border-left: 4px solid #FF5722; border-radius: 4px;">
+                <p style="font-size: 0.9rem; color: #7F8C8D; margin: 0;">Address</p>
+                <p style="font-size: 1.1rem; margin: 0.5rem 0 0 0; color: #2C3E50;">{{ page.address }}</p>
+            </div>
+            {% endif %}
+
+            {% if page.website %}
+            <div style="margin: 1rem 0;">
+                <a href="{{ page.website }}" target="_blank" class="btn">Visit Website</a>
+            </div>
+            {% endif %}
+        </div>
+
+        <div style="margin: 2rem 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="border: none; border-bottom: 3px solid #FF5722; padding-bottom: 0.5rem;">About</h2>
+            <div style="font-size: 1.1rem; line-height: 1.8; color: #2C3E50;">
+                {{ page.content | markdownify }}
+            </div>
+        </div>
+
+        {% if page.content contains 'Signature Dishes' %}
+        <div style="margin: 2rem 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            {% assign sections = page.content | split: '##' %}
+            {% for section in sections %}
+                {% if section contains 'Signature Dishes' %}
+                    <h2 style="border: none; border-bottom: 3px solid #FF5722; padding-bottom: 0.5rem; margin-top: 0;">🍽️ Signature Dishes</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        {% assign dishes = section | split: '- ' %}
+                        {% for dish in dishes %}
+                            {% if dish != '' and dish != 'Signature Dishes' and dish contains '' %}
+                                {% assign dish_name = dish | strip | split: '
+' | first %}
+                                <div style="background: linear-gradient(135deg, #FF5722 0%, #F39C12 100%); color: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                                    <p style="margin: 0; font-weight: 600; font-size: 1.1rem;">{{ dish_name }}</p>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.content contains 'Ambiance' %}
+        <div style="margin: 2rem 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="border: none; border-bottom: 3px solid #FF5722; padding-bottom: 0.5rem; margin-top: 0;">🎭 Ambiance</h2>
+            <p style="font-size: 1.1rem; color: #2C3E50; line-height: 1.8;">
+                {% assign sections = page.content | split: '## Ambiance' | last | split: '## Verdict' | first | strip %}
+                {{ sections | markdownify }}
+            </p>
+        </div>
+        {% endif %}
+
+        {% if page.content contains 'Verdict' %}
+        <div style="margin: 2rem 0; background: linear-gradient(135deg, #FF5722 0%, #F39C12 100%); color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);">
+            <h2 style="border: none; color: white; margin-top: 0;">✨ Our Verdict</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8;">
+                {% assign sections = page.content | split: '## Verdict' | last | split: '---' | first | strip %}
+                {{ sections | markdownify }}
+            </p>
+        </div>
+        {% endif %}
+
+        <div style="margin: 3rem 0; text-align: center; padding: 2rem; background: #ECF0F1; border-radius: 12px;">
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">Want to explore more pizzerias?</p>
+            <a href="/pizza-blog/pizzerias/" class="btn">View All Pizzerias</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .featured {
+        animation: fadeIn 0.8s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>

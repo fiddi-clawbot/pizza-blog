@@ -1,19 +1,28 @@
 title: "Barcelona Pizza Guide"
 description: "Your guide to the best pizzerias and pizza culture in Barcelona"
 author: "Pizza Enthusiast"
-url: "https://fiddi.github.io/pizza-blog"
+url: "https://fiddi-clawbot.github.io/pizza-blog"
 baseurl: "/pizza-blog"
 
+# Theme
 theme: minima
+plugins:
+  - jekyll-feed
 
+# Markdown
 markdown: kramdown
+highlighter: rouge
+
+# Permalink structure
 permalink: /blog/:year/:month/:day/:title/
 
+# Collections
 collections:
   pizzerias:
     output: true
     permalink: /pizzerias/:title/
 
+# Defaults
 defaults:
   - scope:
       path: ""
@@ -26,6 +35,19 @@ defaults:
       type: "pizzerias"
     values:
       layout: "pizzeria"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
-plugins:
-  - jekyll-feed
+# Build settings
+keep_files:
+  - assets
+
+# Exclude from build
+exclude:
+  - pizza-trend-scraper.skill
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - generate_pizzerias.sh
