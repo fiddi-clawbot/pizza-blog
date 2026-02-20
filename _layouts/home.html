@@ -4,94 +4,117 @@ layout: default
 
 <section class="hero">
     <div class="container">
-        <div class="hero-emoji">🍕</div>
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.description }}</p>
-        <a href="#pizzerias" class="btn">Explore Pizzerias</a>
-        <a href="#blog" class="btn btn-secondary">Read Stories</a>
+        <h1>Barcelona Pizza</h1>
+        <p>A journal of the city's finest pizzerias, traditions, and pizza culture.</p>
+        <div class="hero-cta">
+            <a href="#pizzerias" class="btn">Explore</a>
+            <a href="/blog.html" class="btn btn-outline">Read</a>
+        </div>
     </div>
 </section>
 
 <section class="content-section">
     <div class="container">
-        <h2>Featured Pizzerias</h2>
-        <div class="featured">
-            <p>Discover the best pizzerias in Barcelona. From traditional Neapolitan to innovative modern styles, find your next pizza adventure.</p>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">{{ site.pizzerias | size }}+</div>
+                <div class="stat-label">Pizzerias</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Neighborhoods</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">4.2</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Featured Pizzerias</h2>
         </div>
         
-        <div class="pizzeria-grid" id="pizzerias">
+        <div class="grid grid-cols-auto" id="pizzerias">
             {% assign pizzerias = site.pizzerias | sort: 'rating' | reverse | slice: 0, 6 %}
             {% for pizzeria in pizzerias %}
-            <div class="pizzeria-card fade-in">
-                <div class="pizzeria-card-header">
-                    <h3>{{ pizzeria.title }}</h3>
-                    <div class="pizzeria-card-meta">
-                        <span class="location">📍 {{ pizzeria.location }}</span>
-                        <span class="rating">⭐ {{ pizzeria.rating }}/5</span>
+            <div class="card fade-in">
+                <div class="card-header">
+                    <h3 class="card-title">{{ pizzeria.title }}</h3>
+                    <div class="card-meta">
+                        <span>{{ pizzeria.location }}</span>
+                        <span>⭐ {{ pizzeria.rating }}/5</span>
                     </div>
                 </div>
-                <div class="pizzeria-card-body">
-                    <p><strong>{{ pizzeria.cuisine }}</strong></p>
+                <div class="card-body">
                     <p>{{ pizzeria.verdict }}</p>
                 </div>
-                <div class="pizzeria-card-footer">
-                    <span class="badge">{{ pizzeria.price_range }}</span>
-                    <a href="{{ pizzeria.url }}" class="btn" style="flex: 1; text-align: center;">View Details</a>
+                <div class="card-footer">
+                    <span class="badge badge-red">{{ pizzeria.price_range }}</span>
+                    <span class="badge">{{ pizzeria.cuisine }}</span>
+                    <a href="{{ pizzeria.url }}" style="margin-left: auto;">View →</a>
                 </div>
             </div>
             {% endfor %}
         </div>
         
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="/pizza-blog/pizzerias/" class="btn">View All {{ site.pizzerias | size }} Pizzerias</a>
+        <div class="text-center" style="margin-top: var(--space-20);">
+            <a href="/pizzerias.html" class="btn">View All {{ site.pizzerias | size }} Pizzerias</a>
         </div>
     </div>
 </section>
 
-<section class="content-section" id="blog">
+<section class="content-section">
     <div class="container">
-        <h2>Latest Stories</h2>
+        <div class="section-header">
+            <h2>Latest Journal</h2>
+        </div>
+        
         <ul class="post-list">
             {% for post in site.posts limit: 4 %}
-            <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
+            <li class="post-item">
+                <h3 class="post-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h3>
                 <div class="post-meta">
                     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
                     {% if post.categories %}
-                    &bull; 
-                    {% for category in post.categories %}
-                        <span>{{ category }}</span>{% unless forloop.last %}, {% endunless %}
-                    {% endfor %}
+                        {% for category in post.categories %}
+                        <span>{{ category }}</span>
+                        {% endfor %}
                     {% endif %}
                 </div>
             </li>
             {% endfor %}
         </ul>
         
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="/pizza-blog/blog/" class="btn">Read All Blog Posts</a>
+        <div class="text-center" style="margin-top: var(--space-20);">
+            <a href="/blog.html" class="btn btn-ghost">Read All Articles</a>
         </div>
     </div>
 </section>
 
-<section class="content-section" style="background: white; padding: 3rem 0; margin: 3rem 0; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
-    <div class="container text-center">
-        <h2 style="border: none; margin-bottom: 1rem;">Why This Blog?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+<section class="content-section" style="background: var(--color-gray-50); padding: var(--space-20) 0; margin: var(--space-24) 0;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why This Journal?</h2>
+        </div>
+        
+        <div class="grid grid-cols-3">
             <div>
-                <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
-                <h3>Curated Reviews</h3>
-                <p>Honest, detailed reviews of Barcelona's best pizzerias, from hidden gems to iconic institutions.</p>
+                <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-4);">Curated</h4>
+                <p style="font-size: var(--text-sm);">Honest, detailed reviews of Barcelona's finest pizzerias, from hidden gems to iconic institutions.</p>
             </div>
             <div>
-                <div style="font-size: 3rem; margin-bottom: 1rem;">🌍</div>
-                <h3>Pizza Culture</h3>
-                <p>Explore the history, techniques, and evolution of pizza from ancient times to modern Barcelona.</p>
+                <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-4);">Informed</h4>
+                <p style="font-size: var(--text-sm);">Explore the history, techniques, and evolution of pizza from ancient Naples to modern Barcelona.</p>
             </div>
             <div>
-                <div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
-                <h3>Local Insights</h3>
-                <p>Discover neighborhood vibes, hidden spots, and what makes Barcelona's pizza scene unique.</p>
+                <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-4);">Local</h4>
+                <p style="font-size: var(--text-sm);">Discover neighborhood vibes and what makes Barcelona's pizza culture uniquely compelling.</p>
             </div>
         </div>
     </div>

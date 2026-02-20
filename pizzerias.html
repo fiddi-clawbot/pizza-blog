@@ -1,92 +1,63 @@
 ---
 layout: default
-title: Pizzeria Directory - Barcelona
+title: Pizzeria Directory
 ---
 
-<section class="hero">
-    <div class="container">
-        <h1>🍕 Pizzeria Directory</h1>
-        <p>{{ site.pizzerias | size }} pizzerias across Barcelona</p>
-    </div>
-</section>
+<header style="margin-bottom: var(--space-20); text-align: center;">
+    <h1>Pizzeria Directory</h1>
+    <p>{{ site.pizzerias | size }} pizzerias across Barcelona</p>
+</header>
 
-<div class="container" style="padding: 3rem 0;">
-    <div class="content-section">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-            <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <div style="font-size: 2.5rem; color: #FF5722; font-weight: bold;">{{ site.pizzerias | size }}+</div>
-                <p style="margin: 0.5rem 0 0 0; color: #7F8C8D;">Pizzerias Reviewed</p>
-            </div>
-            <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <div style="font-size: 2.5rem; color: #FF5722; font-weight: bold;">⭐ 4.0+</div>
-                <p style="margin: 0.5rem 0 0 0; color: #7F8C8D;">Average Rating</p>
-            </div>
-            <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <div style="font-size: 2.5rem; color: #FF5722; font-weight: bold;">15+</div>
-                <p style="margin: 0.5rem 0 0 0; color: #7F8C8D;">Neighborhoods</p>
-            </div>
+<div style="margin-bottom: var(--space-20);">
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-number">{{ site.pizzerias | size }}</div>
+            <div class="stat-label">Reviewed</div>
         </div>
-
-        <div class="pizzeria-grid">
-            {% assign sorted_pizzerias = site.pizzerias | sort: 'rating' | reverse %}
-            {% for pizzeria in sorted_pizzerias %}
-            <div class="pizzeria-card fade-in">
-                <div class="pizzeria-card-header">
-                    <h3>{{ pizzeria.title }}</h3>
-                    <div class="pizzeria-card-meta">
-                        <span class="location">📍 {{ pizzeria.location }}</span>
-                        <span class="rating">⭐ {{ pizzeria.rating }}/5</span>
-                    </div>
-                </div>
-                <div class="pizzeria-card-body">
-                    <p><strong>{{ pizzeria.cuisine }}</strong></p>
-                    <p>{{ pizzeria.verdict }}</p>
-                    {% if pizzeria.phone %}
-                    <p style="font-size: 0.9rem; color: #7F8C8D;">📞 {{ pizzeria.phone }}</p>
-                    {% endif %}
-                </div>
-                <div class="pizzeria-card-footer">
-                    <span class="badge">{{ pizzeria.price_range }}</span>
-                    <a href="{{ pizzeria.url }}" class="btn" style="flex: 1; text-align: center;">View Details</a>
-                </div>
-            </div>
-            {% endfor %}
+        <div class="stat-box">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Neighborhoods</div>
         </div>
-    </div>
-
-    {% if site.pizzerias.size == 0 %}
-    <div style="text-align: center; padding: 3rem; color: #7F8C8D;">
-        <h3>No pizzerias yet...</h3>
-        <p>Check back soon as our directory grows!</p>
-    </div>
-    {% endif %}
-
-    <div style="text-align: center; padding: 2rem; margin-top: 2rem; background: white; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-        <p style="font-size: 1.1rem; margin-bottom: 1rem;">Discover more about Barcelona's pizza culture</p>
-        <a href="/pizza-blog/" class="btn">← Back to Home</a>
-        <a href="/pizza-blog/blog/" class="btn btn-secondary">📖 Read Blog Posts</a>
+        <div class="stat-box">
+            <div class="stat-number">⭐ 4.2</div>
+            <div class="stat-label">Average Rating</div>
+        </div>
     </div>
 </div>
 
-<style>
-    .pizzeria-card {
-        animation: slideInUp 0.6s ease-out;
-    }
-    
-    @keyframes slideInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+<div class="grid grid-cols-auto">
+    {% assign sorted_pizzerias = site.pizzerias | sort: 'rating' | reverse %}
+    {% for pizzeria in sorted_pizzerias %}
+    <div class="card fade-in">
+        <div class="card-header">
+            <h3 class="card-title">{{ pizzeria.title }}</h3>
+            <div class="card-meta">
+                <span>{{ pizzeria.location }}</span>
+                <span>⭐ {{ pizzeria.rating }}/5</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <p>{{ pizzeria.verdict }}</p>
+            {% if pizzeria.phone %}
+            <p style="font-size: var(--text-sm); color: var(--color-text-lighter); margin: var(--space-4) 0 0 0;">{{ pizzeria.phone }}</p>
+            {% endif %}
+        </div>
+        <div class="card-footer">
+            <span class="badge badge-red">{{ pizzeria.price_range }}</span>
+            <span class="badge">{{ pizzeria.cuisine }}</span>
+            <a href="{{ pizzeria.url }}" style="margin-left: auto;">View →</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
-    @media (max-width: 768px) {
-        .pizzeria-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
+{% if site.pizzerias.size == 0 %}
+<div style="text-align: center; padding: var(--space-20); color: var(--color-text-lighter);">
+    <h3>No pizzerias yet</h3>
+    <p>Check back soon as our directory grows</p>
+</div>
+{% endif %}
+
+<div style="text-align: center; padding: var(--space-12); margin-top: var(--space-20);">
+    <a href="/" class="btn btn-ghost">← Back Home</a>
+</div>
