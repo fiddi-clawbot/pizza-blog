@@ -1,0 +1,31 @@
+title: "Barcelona Pizza Guide"
+description: "Your guide to the best pizzerias and pizza culture in Barcelona"
+author: "Pizza Enthusiast"
+url: "https://fiddi.github.io/pizza-blog"
+baseurl: "/pizza-blog"
+
+theme: minima
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  pizzerias:
+    output: true
+    permalink: /pizzerias/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      category: "blog"
+  - scope:
+      path: ""
+      type: "pizzerias"
+    values:
+      layout: "pizzeria"
+
+plugins:
+  - jekyll-feed
