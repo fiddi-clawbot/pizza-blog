@@ -1,32 +1,39 @@
 ---
-title: "Pizzeria Bianco"
-location: "Eixample, Barcelona"
-address: "Carrer de Còrsega 280, 08008 Barcelona"
-phone: "+34 93 458 XX XX"
-rating: 4.6
-cuisine: "Roman & Neapolitan"
-price_range: "€€"
-website: "https://pizzeriabianco.es"
+layout: pizzeria
+name: Chris Bianco
+city: Phoenix, AZ
+country: USA
+neighborhood: Downtown
+coordinates: "33.4484,-112.0742"
+cuisine: Neapolitan
+image: /assets/images/bianco.jpg
+website: https://www.pizzeriabianco.com
 ---
 
-## About
+# Chris Bianco
 
-Pizzeria Bianco offers a fusion of Roman and Neapolitan styles. Known for crispy, thin-crust pizzas and a welcoming family atmosphere.
+**Downtown Phoenix, Arizona**
 
-## Signature Dishes
+In Phoenix—not Naples, not Rome, not New York—Chris Bianco built one of America's best pizzerias. His obsession with Neapolitan tradition, paired with complete independence from pizza world politics, created something pure.
 
-- **Pizza al Taglio** - By-the-slice Roman style with thin, crispy crust
-- **Cacio e Pepe** - Classic Roman preparation with pecorino and black pepper
-- **Burrata & Prosciutto** - Fresh burrata cheese with aged prosciutto di Parma
+The space is tiny. The menu is simple. The results are extraordinary.
 
-## Ambiance
+**The Philosophy**
 
-Casual, family-friendly restaurant with wood-fired ovens visible from the dining area. Great for quick lunch or dinner.
+Bianco doesn't explain himself. No manifestos, no long-form interviews. He shows up, sources incredible ingredients, and makes pizza with complete focus. His approach: fermentation, temperature, timing. Mastery through repetition.
 
-## Price
+The flour comes from a specific supplier. The water is monitored. The tomatoes are carefully selected. None of this is documented or publicized—it's just how he works.
 
-Slices €3-5, whole pizzas €12-16. Meal around €20-30 per person.
+**Signature Pizza**
 
-## Verdict
+The **Margherita** is the baseline. The **Prickly Pear Cactus** pizza demonstrates his willingness to work with local ingredients while maintaining Neapolitan principles. The **Rossini** (with prosciutto and truffle) shows restraint and precision.
 
-Best for casual dining and trying different styles. Excellent value for quality.
+**Why It Matters**
+
+Bianco proved that American pizzeria excellence doesn't require proximity to Italy or constant media attention. It requires obsession, consistency, and the willingness to say no.
+
+He became a pilgrimage destination without trying to be one. The line wraps around the block. But he never compromised the product to accommodate demand. That's integrity in a business built on immediacy.
+
+---
+
+*Chris Bianco. 623 E Adams St, Phoenix, Arizona 85004*

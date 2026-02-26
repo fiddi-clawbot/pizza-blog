@@ -1,66 +1,39 @@
 ---
-title: "Pizzarium Mozza"
-slug: "pizzarium-mozza"
-location: "Eixample, Barcelona"
-neighborhood: "Eixample"
-address: "Carrer de París 179, 08036 Barcelona"
-phone: "+34 93 457 4567"
-email: "info@pizzariummozza.es"
-hours: "Mon-Thu 12pm-3:30pm, 7pm-11pm • Fri-Sat 12pm-3:30pm, 7pm-11:30pm • Closed Sundays"
-website: "https://www.pizzariummozza.com"
-google_maps: "https://goo.gl/maps/pizzarium-mozza-barcelona"
-rating: 4.7
-cuisine: "Wood-Fired Modern Italian"
-price_range: "€€€"
-price_per_person: "€30-45"
-signature_pizza: "Mortadella di Crema"
-signature_pizza_description: "Fior di latte, mortadella di Bologna, panna (fresh cream), and a touch of black pepper. A rich, elegant take on Roman tradition."
+layout: pizzeria
+name: Pizzarium Mozza
+city: Rome, Italy
+country: Italy
+neighborhood: Prati
+coordinates: "41.9089,12.4689"
+cuisine: Roman
+image: /assets/images/pizzarium-mozza.jpg
+website: https://www.pizzariumroma.com
+---
 
-images:
-  restaurant: "/pizza-blog/assets/images/pizzerias/pizzarium-mozza/restaurant.jpg"
-  pizza: "/pizza-blog/assets/images/pizzerias/pizzarium-mozza/signature-pizza.jpg"
-  owner: "/pizza-blog/assets/images/pizzerias/pizzarium-mozza/owner.jpg"
+# Pizzarium Mozza
 
-owner_name: "Marco Cilento & Team"
-owner_story: "Pizzarium is the Barcelona sister to the acclaimed Los Angeles location. Marco Cilento and his team have brought high-end pizzeria culture to Eixample, focusing on impeccable technique, premium ingredients, and creative pizza that respects Italian tradition while pushing boundaries. The wood-fired oven runs at precise temperatures, and every pizza is a studied composition."
+**Prati, Rome**
 
-snippet: "Upscale wood-fired pizzeria bringing LA quality to Barcelona. Sophisticated flavor combinations with premium ingredients."
+Gabriele Bonci's second concept, focused entirely on pizza *al taglio* and mozzarella. If Al Taglio is the mature expression of Roman pizza mastery, Pizzarium Mozza is the laboratory where he pushes boundaries.
+
+The vibe is more casual—standing room, quick service, high throughput. But the quality never drops. Every tray represents hours of work: fermentation, preparation, baking precision.
+
+**The Specialty**
+
+Mozzarella is treated as a main ingredient, not a topping. Bonci works with cheesemakers to source exceptional buffalo mozzarella and experiments with preparations: smoked, aged, fresh, whipped.
+
+The pizza here often showcases mozzarella as the focal point—sometimes alongside simple toppings (tomato, basil), sometimes in more complex compositions.
+
+**What to Try**
+
+- **Burrata & Pomodoro**: If available. The contrast between creamy burrata and acidic tomato is perfect.
+- **Smoked Mozzarella**: Subtle smoke, excellent cheese quality.
+- **Classic Romana**: Tomato, mozzarella, minimal intervention.
+
+**Why It Matters**
+
+Pizzarium Mozza shows that innovation in traditional pizza comes from mastery, not rebellion. By understanding dough, fermentation, and cheese deeply, Bonci created something new while respecting tradition. It's not pizzeria's future—it's a conversation with its past.
 
 ---
 
-## About Pizzarium Mozza
-
-Pizzarium represents a different caliber of pizza experience—this is destination dining for pizza enthusiasts. Located in a refined Eixample space, the restaurant channels the sophistication of its LA sibling while maintaining authenticity and respect for Italian pizza culture.
-
-### What Makes It Special
-
-- **Wood-Fired Precision**: A specialized oven calibrated for optimal hydration and crust development
-- **Premium Sourcing**: Italian imports (mortadella, mozzarella, tomatoes), Spanish producers for local elements
-- **Creative Technique**: Pizzas that innovate without losing tradition—think elevated comfort food
-- **Ingredient Education**: Staff can explain the provenance and meaning of each component
-- **Ambiance**: Contemporary design, open kitchen, wine program curated for pizza pairings
-
-### Signature Offerings
-
-- **Mortadella di Crema** - Fior di latte, mortadella di Bologna, panna (cream), black pepper. The signature. Rich, balanced, addictive.
-- **Burrata & Beet** - Fresh burrata, roasted beet reduction, arugula, aged balsamic
-- **Funghi Porcini** - Porcini mushrooms, truffle oil, pecorino romano, thyme
-- **Pomodoro Tardivo** - Late-harvest tomatoes, fresh mozzarella, basil, extra virgin olive oil
-
-### Ambiance
-
-Sleek, contemporary space with an open kitchen where you can watch the pizzaioli work. White walls, minimalist décor, warm lighting. Bar seating for singles or couples. Curated background music leans modern but approachable. Professional yet welcoming. The vibe is "serious pizza, but not stuffy."
-
-### Pricing
-
-- Pizzas: €18-28
-- Sides (burrata, salads): €8-15
-- Desserts: €7-10
-- Wine program: €30-80 (by the glass/bottle)
-- **Average per person**: €30-45 (food + wine/drinks)
-
-### Verdict
-
-Pizzarium is essential for anyone who wants to understand modern pizza at its best. This isn't casual weeknight pizza—it's the destination you plan a night around. Marco's team has created something special: technically impeccable pizza that also tastes delicious. The Mortadella di Crema alone justifies a visit.
-
-**Best for**: Special occasions, pizza enthusiasts, those wanting upscale casual dining, wine lovers seeking pairing opportunities.
+*Pizzarium Mozza. Via della Meloria 43, Rome, Italy*

@@ -1,32 +1,37 @@
 ---
-title: "Pizzeria Beddia"
-location: "Gothic Quarter, Barcelona"
-address: "Carrer de la Boqueria 15, 08002 Barcelona"
-phone: "+34 93 402 XX XX"
-rating: 4.8
-cuisine: "Neapolitan Pizza"
-price_range: "€€"
-website: "https://pizzeriabeddia.com"
+layout: pizzeria
+name: Beddia
+city: Philadelphia, PA
+country: USA
+neighborhood: Old City
+coordinates: "39.9489,-75.1405"
+cuisine: Neapolitan
+image: /assets/images/beddia.jpg
+website: https://www.beddiahistory.com
 ---
 
-## About
+# Beddia
 
-Pizzeria Beddia is one of Barcelona's most celebrated pizzerias, known for authentic Neapolitan pizza made with imported Italian ingredients and traditional wood-fired ovens.
+**Old City, Philadelphia**
 
-## Signature Dishes
+One of America's most celebrated pizzerias. Beddia earned national recognition for its obsessive approach to Neapolitan pizza—carefully sourced ingredients, precise fermentation, and a wood-fired oven imported from Naples.
 
-- **Margherita Classica** - The perfect balance of tomato sauce, mozzarella di bufala, and fresh basil
-- **Carbonara** - Guanciale, pecorino romano, and egg yolk
-- **Quattro Formaggi** - A rich blend of four Italian cheeses
+Founded in 2006, Beddia became a pilgrimage spot for serious pizza lovers. The operation is minimal: simple menu, limited seating, impeccable execution. Every pizza is a study in balance and craftsmanship.
 
-## Ambiance
+**The Experience**
 
-Intimate dining experience with exposed brick walls and an open kitchen where you can watch pizzaiolos at work.
+Walk into Beddia and you're immediately aware this isn't casual. The open kitchen dominates the small space. You watch the pizzaiolo work with the same focus a surgeon brings to their craft. No distractions, no shortcuts.
 
-## Price
+The dough has been fermenting for days. The San Marzano tomatoes are specific. The buffalo mozzarella is imported. This level of attention extends to everything—water temperature, oven temperature, timing.
 
-Main pizzas range from €12-18. Expect to spend €25-35 per person including drinks.
+**Signature Pizza**
 
-## Verdict
+The Margherita is the true test. On perfect dough, it's transcendent. Slightly charred crust, pillowy interior, just enough acid from the tomato.
 
-A must-visit for pizza purists. The attention to detail and quality of ingredients makes this one of Barcelona's best.
+**Why It Matters**
+
+Beddia proved that American pizza culture could embrace Neapolitan tradition without nostalgia or compromise. It inspired a generation of pizzerias to take the craft seriously.
+
+---
+
+*Beddia. 1212 Spruce Street, Philadelphia, PA 19107*
